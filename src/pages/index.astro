@@ -1,0 +1,31 @@
+---
+import BaseHead from '../components/BaseHead.astro';
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+import { SITE_TITLE, SITE_DESCRIPTION } from '../consts';
+---
+
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<BaseHead title={SITE_TITLE} description={SITE_DESCRIPTION} />
+	</head>
+	<body>
+		<Header title={SITE_TITLE} />
+		<main>
+			<div style="text-align: center;font-size: 1.5rem;">
+				<h2>Although I have a lot of things that I am not good at</h2>
+				<h2>But I can always tell a different story</h2>
+				<h2>Whether in the real world </h2>
+				<h2>or in the software world</h2>
+				<h2>Although the story is not all smooth sailing</h2>
+				<h2>Read it </h2>
+				<div style="text-align: right;margin-right: 15%;font-style: italic;">
+					by jiacheng.liu
+				</div>
+				
+			</div>
+		</main>
+		<Footer />
+	</body>
+</html>
