@@ -3,14 +3,14 @@ import HeaderLink from './HeaderLink.astro';
 import { SITE_TITLE } from '../consts';
 ---
 
-<header>
+<!-- <header> -->
 	<nav>
-		<h2><a href="/">{SITE_TITLE}</a></h2>
+		<h2 style="margin-left: 2vw;"><a href="/">{SITE_TITLE}</a></h2>
 		<div class="internal-links">
-			<HeaderLink href="/">Home</HeaderLink>
-			
-			<HeaderLink href="/blog">Blog</HeaderLink>
-			<HeaderLink href="/about">About</HeaderLink>
+			<HeaderLink href="/">首页</HeaderLink>
+			<HeaderLink href="/blog">文章</HeaderLink>
+			<a href="https://s.realcpf.tech" target="_blank">文档站</a>
+			<HeaderLink href="/about">关于</HeaderLink>
 		</div>
 		<div class="social-links">
 			<a href="https://github.com/real-cpf" target="_blank">
@@ -24,7 +24,7 @@ import { SITE_TITLE } from '../consts';
 			</a>
 		</div>
 	</nav>
-</header>
+<!-- </header> -->
 <style>
 	
 	header {
@@ -43,9 +43,14 @@ import { SITE_TITLE } from '../consts';
 		text-decoration: none;
 	}
 	nav {
+		z-index: 999;
+		position:fixed;
 		display: flex;
 		align-items: center;
 		justify-content: space-between;
+		overflow-x: auto;
+		background-color:bisque;
+		width: 100vw;
 	}
 	nav a {
 		padding: 1em 0.5em;
@@ -60,6 +65,9 @@ import { SITE_TITLE } from '../consts';
 	.social-links,
 	.social-links a {
 		display: flex;
+	}
+	.social-links {
+		margin-right: 2vw;
 	}
 	@media (max-width: 720px) {
 		.social-links {
