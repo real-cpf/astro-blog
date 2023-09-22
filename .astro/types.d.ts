@@ -202,6 +202,13 @@ declare module 'astro:content' {
 } & { render(): Render[".md"] };
 };
 "doc": {
+"the-akka-intr.md": {
+	id: "the-akka-intr.md";
+  slug: "the-akka-intr";
+  body: string;
+  collection: "doc";
+  data: InferEntrySchema<"doc">
+} & { render(): Render[".md"] };
 "this-is-a-doc.md": {
 	id: "this-is-a-doc.md";
   slug: "this-is-a-doc";

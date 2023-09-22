@@ -1,19 +1,15 @@
 ---
-
-import { type CollectionEntry, getCollection } from 'astro:content';
+import BaseHead from "../../components/BaseHead.astro";
+import Header from "../../components/Header.astro";
+import Footer from "../../components/Footer.astro";
+import { SITE_TITLE, SITE_DESCRIPTION } from "../../consts";
+import { getCollection } from "astro:content";
+import FormattedDate from "../../components/FormattedDate.astro";
+import Navbars from "../../components/Navbars.astro";
+import docMate from "../../matedata/subject-data.json"
 export async function getStaticPaths() {
-  const pages = [
-    {
-      subject: "java",
-    },
-    {
-      subject: "java",
-    },
-    {
-      subject: "rust",
-    },
-  ];
-
+  
+  const pages = docMate["data"];
   return pages.map(({ subject }) => {
     return {
       params: { subject },
@@ -24,27 +20,60 @@ export async function getStaticPaths() {
 const { subject } = Astro.props;
 
 
-const posts = (await getCollection('doc')).sort(
+const theDocs = (await getCollection('doc')).sort(
 	(a, b) => a.data.pubDate.valueOf() - b.data.pubDate.valueOf()
 ).filter((p)=>p.data.subject==subject);
 
 
 ---
 
-<html>
-  <head>
+<!doctype html>
+<html lang="en">
+	<head>
+		<BaseHead title={SITE_TITLE} description={SITE_DESCRIPTION} />
+	</head>
+	<body>
+		<Navbars />
+		<main>
+			<div class="flex flex-row space-x-4 text-justify outline outline-2  outline-offset-2">
+				<a href="/doc" class="inline-block  rounded-lg">
+					全部
+				</a>
+				{
+					docMate["data"].map((sub)=>(
 
-  </head>
+					<a href={`/sub/${sub.subject}`} class="inline-block  outline-dashed outline-2 outline-offset-2 shadow-inner my-8">
+						{sub.subject}
+					</a>
+					))
+				}
+				
+			  </div>
+			  <hr>
+			<ul>
+				{
+					theDocs.map((doc) => (
+						<article class="grid grid-cols-2 place-content-center h-36 ">
+							<div>
+								<h2>
+							<a href={`/doc/${doc.slug}`}>{doc.data.title}</a>	</h2>
+							<div>
+								{doc.data.description}
+							</div>
 
-  <body>
-    <div>
-    {
-      posts.map((post)=>(
-        <div>
-          {post.data.title}
-          </div>
-      ))
-    }  
-    </div>    
-  </body>
+								
+									<time datetime="2020-03-16" class="text-gray-500">
+									<FormattedDate date={doc.data.pubDate} />
+									</time>
+							
+							</div>
+
+							<img src={doc.data.heroImage} alt="" class="h-20 w-30">
+						</article>
+					))
+				}
+			</ul>
+		</main>
+		<Footer />
+	</body>
 </html>

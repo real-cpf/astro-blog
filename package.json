@@ -4,11 +4,12 @@
   "version": "0.0.1",
   "private": true,
   "scripts": {
-    "dev": "astro dev",
-    "start": "astro dev",
-    "build": "astro build",
-    "preview": "astro preview",
-    "astro": "astro"
+    "test":"node ./script/pre-build.js",
+    "dev": "node ./script/pre-build.js && astro dev",
+    "start": "node ./script/pre-build.js && astro dev",
+    "build": "node ./script/pre-build.js && astro build",
+    "preview": "node ./script/pre-build.js && astro preview",
+    "astro": "node ./script/pre-build.js && astro"
   },
   "dependencies": {
     "@astrojs/mdx": "^1.0.0",
