@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="wasm_exec.js"></script>
+</head>
+
+<body style="color:#bcbdd0;background-color:darkslategrey;">
+    <h1>WASM test</h1>
+    <h4>test file path : /static/sub/main.wasm</h4>
+    <div style="display: grid;grid: repeat(4,20px) / auto-flow 900px;row-gap: 20px;column-gap: 20px;">
+        <label for="wasm-url">wasm url</label><input type="text" id="wasm-url" >
+        <label for="result">wasm result</label><input type="text" readonly id="wasm-result">
+    </div>
+    <script>
+        if (!WebAssembly.instantiateStreaming) {
+            WebAssembly.instantiateStreaming = async (resp, importObject) => {
+                const source = await (await resp).arrayBuffer()
+                return await WebAssembly.instantiate(source, importObject)
+            }
+        }
+        function loadWasm(path) {
+            const go = new Go()
+            return new Promise((resolve, reject) => {
+                WebAssembly.instantiateStreaming(fetch(path), go.importObject)
+                    .then(result => {
+                        go.run(result.instance)
+                        resolve(result.instance)
+                    })
+                    .catch(error => {
+                        reject(error)
+                    })
+            })
+        }
+
+
+        document.querySelector('#wasm-url').addEventListener('change', (e) => {
+            let url = document.querySelector('#wasm-url').value
+            if (url && new String(url).endsWith('.wasm')) {
+                loadWasm(url).then(wasm => {
+                    let res = go_task_func(12.32)
+                    document.querySelector('#wasm-result').value = res
+                }).catch(error => {
+                    document.querySelector('#wasm-result').value = error
+                })
+            }
+
+        })
+
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>excelize calc</title>
+    <style>
+        #process1 label {
+            display: block
+        }
+    </style>
+</head>
+<body>
+    
+    <div id="process1">
+        <span style="color: red;">生成excel并设置行头</span>
+        <label for="excel-name">
+            Excel文件名
+            <input type="text" name="excel-name" id="excel-name">
+            .xlsx
+        </label>
+        <label for="sheet-name">
+            Sheet文件名
+            <input type="text" name="sheet-name" id="sheet-name">2
+            默认Sheet
+        </label>
+        <label for="col-title">
+            行头
+            <input type="text" name="col-title" id="col-title">
+            用逗号隔开
+        </label>
+        <input type="button" value="生成" id="process1-btn" onclick="generate(this)">
+    </div>
+
+    <div>
+        <textarea name="code" id="code" cols="100" rows="100"></textarea>
+    </div>
+
+    <script>
+        
+        function getNewFileCode(){
+            return     `    f := excelize.NewFile()
+                            defer func() {
+                                if err := f.Close(); err != nil {
+                                    fmt.Println(err)
+                                }
+                            }()`
+        }
+        function getNewSheetByNameCode(name) {
+            return `index, err := f.NewSheet("${name}")
+                    if err != nil {
+                        fmt.Println(err)
+                        return
+                    }
+                    f.SetActiveSheet(index)`
+        }
+        function getSaveAsByNameCode(fileName) {
+            return `if err := f.SaveAs("${fileName}.xlsx"); err != nil {
+                        fmt.Println(err)
+                    }`
+        }
+        function getFirstRow(cols,sheetName) {
+            return `	row := []interface{}{"${cols}"}
+	                    f.SetSheetRow("${sheetName}", "A1", &row)`
+        }
+        function process1(){
+            const sheetName = document.querySelector('#sheet-name').value
+            const fileName =document.querySelector('#excel-name').value
+            const colTitle = document.querySelector('#col-title').value
+            const cols = colTitle.split(',').join("\",\"")
+            
+
+            const code = `${getNewFileCode()}
+                            ${getNewSheetByNameCode(sheetName)}
+                            ${getFirstRow(cols,sheetName)}
+                            ${getSaveAsByNameCode(fileName)}`
+                            document.querySelector('#code').value = code
+        }
+        function generate(e){
+            const id = e.id
+            if(id.startsWith("process1")) {
+                process1()
+            }
+        }
+    </script>
+</body>
+</html>

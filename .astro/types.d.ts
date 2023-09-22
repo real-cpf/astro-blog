@@ -209,6 +209,55 @@ declare module 'astro:content' {
   collection: "doc";
   data: InferEntrySchema<"doc">
 } & { render(): Render[".md"] };
+"the-datax-intr.md": {
+	id: "the-datax-intr.md";
+  slug: "the-datax-intr";
+  body: string;
+  collection: "doc";
+  data: InferEntrySchema<"doc">
+} & { render(): Render[".md"] };
+"the-excelize-intr.md": {
+	id: "the-excelize-intr.md";
+  slug: "the-excelize-intr";
+  body: string;
+  collection: "doc";
+  data: InferEntrySchema<"doc">
+} & { render(): Render[".md"] };
+"the-java-jdk-news.md": {
+	id: "the-java-jdk-news.md";
+  slug: "the-java-jdk-news";
+  body: string;
+  collection: "doc";
+  data: InferEntrySchema<"doc">
+} & { render(): Render[".md"] };
+"the-jdbc-intr.md": {
+	id: "the-jdbc-intr.md";
+  slug: "the-jdbc-intr";
+  body: string;
+  collection: "doc";
+  data: InferEntrySchema<"doc">
+} & { render(): Render[".md"] };
+"the-kafka-intr.md": {
+	id: "the-kafka-intr.md";
+  slug: "the-kafka-intr";
+  body: string;
+  collection: "doc";
+  data: InferEntrySchema<"doc">
+} & { render(): Render[".md"] };
+"the-kotlin-compose-intr.md": {
+	id: "the-kotlin-compose-intr.md";
+  slug: "the-kotlin-compose-intr";
+  body: string;
+  collection: "doc";
+  data: InferEntrySchema<"doc">
+} & { render(): Render[".md"] };
+"the-netty-intr.md": {
+	id: "the-netty-intr.md";
+  slug: "the-netty-intr";
+  body: string;
+  collection: "doc";
+  data: InferEntrySchema<"doc">
+} & { render(): Render[".md"] };
 "this-is-a-doc.md": {
 	id: "this-is-a-doc.md";
   slug: "this-is-a-doc";

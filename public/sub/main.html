@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>main</title>
+</head>
+
+<body>
+    <div class="colorful-stripe">
+        <div class="g-loading-line">
+            <div class="drop-water">
+                Jia cheng 's Avalon`
+            </div>
+        </div>
+
+
+    </div>
+
+    <style>
+        .drop-water {
+            position: relative;
+            width: 640px;
+            height: 126px;
+            color: #fff;
+            font-size: 70px;
+            text-align: center;
+            margin: 100px auto;
+            border-bottom: 10px solid #fff;
+            -webkit-transform: skewY(5deg);
+            transform: skewY(5deg);
+        }
+
+        .drop-water::before {
+            position: absolute;
+            content: "";
+            left: 0;
+            bottom: -20px;
+            width: 10px;
+            height: 20px;
+            border-radius: 50%;
+            background: #0ab794;
+            -webkit-transform: translate(0, 0);
+            transform: translate(0, 0);
+            -webkit-animation: move 7.5s ease-in-out infinite;
+            animation: move 7.5s ease-in-out infinite;
+        }
+
+        .drop-water::after {
+            position: absolute;
+            content: "...";
+            left: 0;
+            bottom: -20px;
+            width: 10px;
+            height: 20px;
+            border-radius: 50%;
+            background: #92d208;
+            -webkit-transform: translate(0, 0);
+            transform: translate(0, 0);
+            -webkit-animation: move 7.5s ease-in-out 1s infinite;
+            animation: move 7.5s ease-in-out 1s infinite;
+        }
+
+        @-webkit-keyframes move {
+            80% {
+                bottom: -30px;
+                -webkit-transform: translate(620px, 0);
+                transform: translate(620px, 0);
+            }
+
+            93% {
+                -webkit-transform: translate(620px, 3px);
+                transform: translate(620px, 3px);
+                opacity: 1;
+            }
+
+            100% {
+                -webkit-transform: translate(620px, 150px);
+                transform: translate(620px, 150px);
+                opacity: 0;
+            }
+        }
+
+        @keyframes move {
+            80% {
+                bottom: -30px;
+                -webkit-transform: translate(620px, 0);
+                transform: translate(620px, 0);
+            }
+
+            93% {
+                -webkit-transform: translate(620px, 3px);
+                transform: translate(620px, 3px);
+                opacity: 1;
+            }
+
+            100% {
+                -webkit-transform: translate(620px, 150px);
+                transform: translate(620px, 150px);
+                opacity: 0;
+            }
+        }
+
+
+        .colorful-stripe {
+            height: 100%;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            -webkit-transform: translate(-50%, -50%);
+            transform: translate(-50%, -50%);
+            width: 80%;
+            line-height: 200px;
+            text-align: center;
+            color: #fff;
+            font-size: 200%;
+            border-radius: .5em;
+            background: linear-gradient(limegreen, transparent), linear-gradient(90deg, skyblue, transparent), linear-gradient(-90deg, coral, transparent);
+            background-blend-mode: screen;
+            -webkit-animation: colorfulStripeChange 5s infinite alternate linear;
+            animation: colorfulStripeChange 5s infinite alternate linear;
+        }
+
+        @-webkit-keyframes colorfulStripeChange {
+            100% {
+                -webkit-filter: hue-rotate(360deg);
+                filter: hue-rotate(360deg);
+            }
+        }
+
+        @keyframes colorfulStripeChange {
+            100% {
+                -webkit-filter: hue-rotate(360deg);
+                filter: hue-rotate(360deg);
+            }
+        }
+
+
+        .g-loading-line {
+            position: relative;
+            width: 100%;
+            height: 300px;
+            border-radius: 50%;
+            margin: auto;
+            transform: rotate(360deg);
+            animation: rotate 45s infinite linear;
+        }
+
+        .g-loading-line::before {
+            position: absolute;
+            content: "";
+            top: 0px;
+            left: 0px;
+            right: 0px;
+            bottom: 0px;
+            box-sizing: border-box;
+            border-radius: 50%;
+            border-top: 3px solid #000;
+            border-left: 3px solid #000;
+            border-bottom: 3px solid transparent;
+            border-right: 3px solid transparent;
+            transform: rotate(720deg);
+            animation: rotate 3s infinite ease-out;
+        }
+
+        .g-loading-line::after {
+            position: absolute;
+            content: "";
+            top: -2px;
+            left: -2px;
+            right: -2px;
+            bottom: -2px;
+            box-sizing: border-box;
+            border-radius: 50%;
+            border-bottom: 7px solid transparent;
+            border-right: 7px solid transparent;
+            border-top: 7px solid #af16e3;
+            border-left: 7px solid #fff;
+            transform: rotate(720deg);
+            animation: rotate 3s infinite ease-in-out;
+        }
+
+        @keyframes rotate {
+            100% {
+                transform: rotate(0deg);
+            }
+        }
+    </style>
+</body>
+
+</html>

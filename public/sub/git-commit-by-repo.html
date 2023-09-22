@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>commit detail</title>
+    <script>
+        window.onload=()=>{
+            const url = location.href;
+            var i = url.lastIndexOf('?')
+            if (i < 0 || i == url.length-1) {
+                document.writeln('need repo id')
+            }else {
+                const repo_id = url.substring(i+1)
+                fetch(`https://jihulab.com/api/v4/projects/${repo_id}/repository/commits`)
+                .then(res=>res.json())
+                .then(data=>{
+                    var commits = document.querySelector('#commits')
+                    data.forEach(ele=>{
+                        var tr = document.createElement('tr')
+                        var date_time = document.createElement('td')
+                        var url = document.createElement('td')
+                        date_time.innerText = ele.created_at
+                        url.innerText = ele.web_url
+                        tr.appendChild(date_time)
+                        tr.appendChild(url)
+                        commits.appendChild(tr)
+                    })
+                })
+            }
+        }
+    </script>
+</head>
+<body style="color:brown;">
+    <table id="commits">
+
+    </table>
+    
+</body>
+</html>

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>repos </title>
+    <script>
+        window.onload=()=>{
+            const jihu_list = "https://jihulab.com/api/v4/users/realcpf/projects"
+            fetch(jihu_list).then(res=>res.json()).then(d=>{
+                var table = document.querySelector('#repos')
+                d.forEach(element => {
+                   var tr = document.createElement('tr')
+                   var td_name = document.createElement('td')
+                   var td_url = document.createElement('td')
+                   var last_update = document.createElement('td')
+                   var detail = document.createElement('td')
+                   td_name.innerText = element.name
+                   td_url.innerHTML = `<a href='${element.web_url}'>${element.name_with_namespace}</a>`
+                   last_update.innerText = element.last_activity_at
+                   detail.innerHTML = `<a href='git-commit-by-repo.html?${element.id}' target='_blank'>commits</a>`
+                   tr.appendChild(td_name)
+                   tr.appendChild(td_url)
+                   tr.appendChild(last_update)
+                   tr.appendChild(detail)
+                   table.appendChild(tr)
+                });
+                console.log(d)
+            })
+        }
+    </script>
+</head>
+<body style="color: aqua;">
+    <table id="repos">
+        <tr>
+            <td>repo name</td>
+            <td>url</td>
+            <td>last update</td>
+            <td>detail</td>
+        </tr>
+    </table>
+</body>
+</html>
