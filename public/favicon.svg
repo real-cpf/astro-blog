@@ -1,9 +1,23 @@
-<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 128 128">
-    <path d="M50.4 78.5a75.1 75.1 0 0 0-28.5 6.9l24.2-65.7c.7-2 1.9-3.2 3.4-3.2h29c1.5 0 2.7 1.2 3.4 3.2l24.2 65.7s-11.6-7-28.5-7L67 45.5c-.4-1.7-1.6-2.8-2.9-2.8-1.3 0-2.5 1.1-2.9 2.7L50.4 78.5Zm-1.1 28.2Zm-4.2-20.2c-2 6.6-.6 15.8 4.2 20.2a17.5 17.5 0 0 1 .2-.7 5.5 5.5 0 0 1 5.7-4.5c2.8.1 4.3 1.5 4.7 4.7.2 1.1.2 2.3.2 3.5v.4c0 2.7.7 5.2 2.2 7.4a13 13 0 0 0 5.7 4.9v-.3l-.2-.3c-1.8-5.6-.5-9.5 4.4-12.8l1.5-1a73 73 0 0 0 3.2-2.2 16 16 0 0 0 6.8-11.4c.3-2 .1-4-.6-6l-.8.6-1.6 1a37 37 0 0 1-22.4 2.7c-5-.7-9.7-2-13.2-6.2Z" />
-    <style>
-        path { fill: #000; }
-        @media (prefers-color-scheme: dark) {
-            path { fill: #FFF; }
-        }
-    </style>
+<?xml version="1.0" encoding="utf-8"?>
+<svg viewBox="188.017 34.976 233.017 221.39" xmlns="http://www.w3.org/2000/svg" xmlns:bx="https://boxy-svg.com">
+  <defs>
+    <linearGradient id="color-0" gradientUnits="userSpaceOnUse" bx:pinned="true">
+      <stop style="stop-color: rgb(92, 201, 190);"/>
+    </linearGradient>
+    <linearGradient id="color-1" gradientUnits="userSpaceOnUse" gradientTransform="matrix(1, 0, 0, 1, 9.70524, 22.841984)" bx:pinned="true">
+      <stop style="stop-color: rgb(65, 202, 53);"/>
+    </linearGradient>
+    <linearGradient id="color-2" gradientUnits="userSpaceOnUse" bx:pinned="true">
+      <stop style="stop-color: rgb(210, 196, 51);"/>
+    </linearGradient>
+    <linearGradient id="color-3" gradientUnits="userSpaceOnUse" bx:pinned="true">
+      <stop style="stop-color: rgb(179, 57, 216);"/>
+    </linearGradient>
+  </defs>
+  <rect x="199.352" y="44.986" width="208.549" height="196.05" style="stroke: rgb(0, 0, 0); fill: url('#color-0');"/>
+  <path style="fill: url('#color-1'); stroke: rgb(0, 0, 0);" d="M 292.127 96.896 L 219.408 141.282 L 269.654 258.281 L 358.294 215.327"/>
+  <path style="fill: url('#color-2'); stroke: rgb(0, 0, 0);" d="M 231.346 99.539 L 285.917 211.927 L 368.995 171.735 L 293.18 58.117 L 231.346 99.539 Z"/>
+  <path style="fill: url('#color-3'); stroke: rgb(0, 0, 0);" d="M 251.205 53.276 L 301.874 154.437 L 376.335 119.403 L 315.207 17.757 L 251.205 53.276 Z"/>
+  <text style="fill: rgb(51, 51, 51); font-family: Arial, sans-serif; font-size: 19px; white-space: pre;" x="220.418" y="209.434"> </text>
+  <text style="fill: rgb(51, 51, 51); font-family: Caladea; font-size: 19px; font-style: italic; text-transform: lowercase; white-space: pre;"><tspan x="339.977" y="200.241" style="text-decoration: underline overline solid rgba(0, 0, 0, 0.8);">realcpf</tspan></text>
 </svg>

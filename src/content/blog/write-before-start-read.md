@@ -3,6 +3,7 @@ title: '写在即将阅读下面的文章之前'
 description: '写在即将阅读下面的文章之前.'
 pubDate: 'Jul 19 2023'
 heroImage: '/img-1-1.jpeg'
+score: 0
 ---
 
 

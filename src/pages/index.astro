@@ -2,6 +2,8 @@
 import BaseHead from '../components/BaseHead.astro';
 import Header from '../components/Header.astro';
 import Footer from '../components/Footer.astro';
+import Navbars from '../components/Navbars.astro';
+import StartPosts from '../components/StartPosts.astro';
 import { SITE_TITLE, SITE_DESCRIPTION } from '../consts';
 ---
 
@@ -11,9 +13,10 @@ import { SITE_TITLE, SITE_DESCRIPTION } from '../consts';
 		<BaseHead title={SITE_TITLE} description={SITE_DESCRIPTION} />
 	</head>
 	<body>
-		<Header title={SITE_TITLE} />
-		
-		<main style="width:60vw;position: relative;top:20vh;min-height: 95vh;">
+		<!-- <Header title={SITE_TITLE} /> -->
+		<Navbars></Navbars>
+		<StartPosts></StartPosts>
+		<!-- <main style="width:60vw;position: relative;top:20vh;min-height: 95vh;">
 			<div style="width: 30vw;float:left;margin-right:10vh;">
 				<img src="/index-3.webp" alt="">
 			</div>
@@ -30,23 +33,15 @@ import { SITE_TITLE, SITE_DESCRIPTION } from '../consts';
 					No life,<br>No live
 				</span>
 			</div>
-			
-			<!-- <div style="text-align: center;font-size: 1.5rem;color:bisque;background-color: blanchedalmond;">
-				<h2>Although I have a lot of things that I am not good at</h2>
-				<h2>But I can always tell a different story</h2>
-				<h2>Whether in the real world </h2>
-				<h2>or in the software world</h2>
-				<h2>Although the story is not all smooth sailing</h2>
-				<h2>Read it </h2>
-				<div style="text-align: right;margin-right: 15%;font-style: italic;">
-					by jiacheng.liu
-				</div>
-				
-			</div> -->
+
 		</main>
+
 		<div style="height: 1vh;">
 			<hr>
-		</div>
-		<Footer />
+		</div> -->
+		<Footer /> 
+
+
+
 	</body>
 </html>
