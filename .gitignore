@@ -1,0 +1,12 @@
+*/target
+*/*/target
+*/.vscode
+*/*/.vscode
+# rust-demo/target
+# rust-demo-1/target
+# trace-var/example/target
+#　trace-var/trace-var/target
+node_modules
+.codesandbox
+.vscode
+*.lock
