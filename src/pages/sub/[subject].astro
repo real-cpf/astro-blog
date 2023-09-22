@@ -1,0 +1,50 @@
+---
+
+import { type CollectionEntry, getCollection } from 'astro:content';
+export async function getStaticPaths() {
+  const pages = [
+    {
+      subject: "java",
+    },
+    {
+      subject: "java",
+    },
+    {
+      subject: "rust",
+    },
+  ];
+
+  return pages.map(({ subject }) => {
+    return {
+      params: { subject },
+      props: { subject },
+    };
+  });
+}
+const { subject } = Astro.props;
+
+
+const posts = (await getCollection('doc')).sort(
+	(a, b) => a.data.pubDate.valueOf() - b.data.pubDate.valueOf()
+).filter((p)=>p.data.subject==subject);
+
+
+---
+
+<html>
+  <head>
+
+  </head>
+
+  <body>
+    <div>
+    {
+      posts.map((post)=>(
+        <div>
+          {post.data.title}
+          </div>
+      ))
+    }  
+    </div>    
+  </body>
+</html>
