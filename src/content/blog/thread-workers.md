@@ -2,7 +2,7 @@
 title: 'async , sync ,block ,non block'
 description: 'This is a new architectural paradigm'
 pubDate: 'Sep 24 2023'
-heroImage: '/blog-placeholder-4.jpg'
+heroImage: '/convers/blog/thread-workers.svg'
 score: 1
 ---
 

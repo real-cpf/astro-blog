@@ -2,7 +2,7 @@
 title: 'Protocol Translator'
 description: ' 一个应用层协议翻译器'
 pubDate: 'Sep 24 2023'
-heroImage: '/blog-placeholder-4.jpg'
+heroImage: '/convers/blog/the-protocol-translator.png'
 score: 1
 ---
 

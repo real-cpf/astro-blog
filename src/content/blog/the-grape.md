@@ -2,7 +2,7 @@
 title: 'High concurrency task support system'
 description: 'High concurrency task support system'
 pubDate: 'Sep 24 2023'
-heroImage: '/blog-placeholder-4.jpg'
+heroImage: '/convers/blog/the-grape.jpg'
 score: 1
 ---
 

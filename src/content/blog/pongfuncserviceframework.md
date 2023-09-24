@@ -2,7 +2,7 @@
 title: 'Pong Function Service Framework'
 description: 'This is a new architectural paradigm'
 pubDate: 'Sep 24 2023'
-heroImage: '/blog-placeholder-4.jpg'
+heroImage: '/convers/blog/pongfuncserviceframework.png'
 score: 1
 ---
 ## Write Before All Start
