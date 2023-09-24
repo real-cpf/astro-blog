@@ -4,7 +4,7 @@ description: 'dataX 分析文档'
 pubDate: 'Sep 19 2023'
 heroImage: '/blog-placeholder-2.jpg'
 score: 99
-subject: 'datax'
+subject: 'db'
 ---
 
 > [DataX](https://github.com/alibaba/DataX/blob/master/introduction.md) is a batch sync framework also an efficient and concise solution

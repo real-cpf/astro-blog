@@ -22,13 +22,17 @@ function scanFiles(where) {
     
     // 定义一个空数组用于存储文件的第一行
     const lines = [];
+    var s = new Set();
     
     // 遍历文件路径
     filePaths.forEach(filePath => {
         // 如果文件以 md 结尾，则获取其第一行并添加到数组中
         if (filePath.endsWith('.md')) {
             const v = getFirstLineOfFile(where +'/' +filePath,'subject');
-            lines.push({"subject":v});
+            if (!s.has(v)) {
+                lines.push({"subject":v});
+                s.add(v);
+            }
         }
     });
     

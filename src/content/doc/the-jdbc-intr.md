@@ -4,7 +4,7 @@ description: 'jdbc'
 pubDate: 'Sep 19 2023'
 heroImage: '/blog-placeholder-2.jpg'
 score: 99
-subject: 'jdbc'
+subject: 'db'
 ---
 
 ### 表结构、列信息获取

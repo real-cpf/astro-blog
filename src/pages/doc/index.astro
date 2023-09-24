@@ -9,7 +9,7 @@ import Navbars from "../../components/Navbars.astro";
 import docMate from "../../matedata/subject-data.json"
 const subjects = docMate["data"]
 const theDocs = (await getCollection("doc")).sort(
-	(a, b) => a.data.pubDate.valueOf() - b.data.pubDate.valueOf(),
+	(a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf(),
 );
 ---
 

@@ -4,7 +4,7 @@ description: 'kafka 文档'
 pubDate: 'Sep 19 2023'
 heroImage: '/blog-placeholder-2.jpg'
 score: 99
-subject: 'kafka'
+subject: 'db'
 ---
 
 ### 查看Topic
