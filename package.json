@@ -4,7 +4,7 @@
   "version": "0.0.1",
   "private": true,
   "scripts": {
-    "test":"node ./script/pre-build.js",
+    "test": "node ./script/pre-build.js",
     "dev": "node ./script/pre-build.js && astro dev",
     "start": "node ./script/pre-build.js && astro dev",
     "build": "node ./script/pre-build.js && astro build",
@@ -16,6 +16,7 @@
     "@astrojs/rss": "^3.0.0",
     "@astrojs/sitemap": "^3.0.0",
     "@astrojs/tailwind": "^5.0.0",
+    "@netlify/functions": "^2.1.0",
     "astro": "^3.0.8",
     "sharp": "^0.32.5",
     "tailwindcss": "^3.3.3"
