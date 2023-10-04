@@ -2,7 +2,7 @@
 title: 'Jdbc'
 description: 'jdbc'
 pubDate: 'Sep 19 2023'
-heroImage: '/blog-placeholder-2.jpg'
+heroImage: '/convers/doc/back-01.png'
 score: 99
 subject: 'db'
 ---

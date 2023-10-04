@@ -2,7 +2,7 @@
 title: 'Serde Syn quote'
 description: 'Serde Syn quote 分析文档'
 pubDate: 'Sep 24 2023'
-heroImage: '/blog-placeholder-2.jpg'
+heroImage: '/convers/doc/serde-syn-quote-01.webp'
 score: 99
 subject: 'rust'
 ---

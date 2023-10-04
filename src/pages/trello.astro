@@ -1,0 +1,15 @@
+
+---
+
+
+---
+hello
+<script is:inline>
+    fetch({
+        method:'POST',
+        url:'/.netlify/functions/lastday'
+    }).then(res=>res.json()).then(data=>{
+        console.log(data)
+    })
+
+</script>

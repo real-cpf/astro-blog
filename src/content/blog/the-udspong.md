@@ -2,7 +2,7 @@
 title: 'UDS Pong'
 description: 'An inter-container messaging mechanism that does not require a TCPIP network.'
 pubDate: 'Sep 24 2023'
-heroImage: '/convers/blog/the-udspong.svg'
+heroImage: '/convers/blog/back-08.png'
 score: 1
 ---
 

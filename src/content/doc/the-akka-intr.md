@@ -2,7 +2,7 @@
 title: 'Akka'
 description: 'akka常用文档'
 pubDate: 'Sep 19 2023'
-heroImage: '/blog-placeholder-2.jpg'
+heroImage: '/convers/doc/akka-01.png'
 score: 99
 subject: 'actor'
 ---

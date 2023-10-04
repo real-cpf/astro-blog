@@ -2,7 +2,7 @@
 title: 'Spring'
 description: 'Serde Syn quote 分析文档'
 pubDate: 'Sep 24 2023'
-heroImage: '/blog-placeholder-2.jpg'
+heroImage: '/convers/doc/java-spring.jpg'
 score: 99
 subject: 'web'
 ---

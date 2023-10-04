@@ -2,7 +2,7 @@
 title: 'Actix'
 description: 'actix常用文档'
 pubDate: 'Sep 24 2023'
-heroImage: '/blog-placeholder-2.jpg'
+heroImage: '/convers/doc/actix-01.webp'
 score: 99
 subject: 'rust'
 ---
